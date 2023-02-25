@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    html {
+      font-family: Playfair;
+    }
+
+    .borderbrown{
+      border-color: #D0D0A7;
+    }
+
+    .borderblue{
+      border-color:#0B8497;
+    }
+
+    .first{
+      background-color: #E7F2ED
+    }
+
+    .txtblue{
+      color:#04282D;
+    }
+
+    .txtbrown{
+      color:#777777;
+    }
+
+    .second{
+      background-color: #F2F2E6;
+    }
+
+}
