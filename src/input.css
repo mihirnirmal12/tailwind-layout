@@ -4,9 +4,6 @@
 
 
 @layer base {
-    html {
-      font-family: Playfair;
-    }
 
     .borderbrown{
       border-color: #D0D0A7;
@@ -30,6 +27,14 @@
 
     .second{
       background-color: #F2F2E6;
+    }
+
+    .brdrmnd{
+      border-color:#808013;
+    }
+
+    .brdrpnk{
+      border-color:#F8A488;
     }
 
 }

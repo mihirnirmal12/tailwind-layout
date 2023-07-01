@@ -1,144 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <title>Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
   </head>
 
 <body>
   <header
     class="borderbrown z-10 bg-white sticky top-0 w-full border-b-2 shadow"
   >
-    <nav>
-      <div class="container flex p-2">
-        <div class="mx-auto py-5">
-          <img src="/img/logo.png" class="w-30" alt="logo" />
+  <div class="bg-nav border-b-navline border-b-2">
+  <nav class="px-2 w-full bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+    <div class="container flex flex-wrap items-center justify-around mx-auto">
+        <button data-collapse-toggle="navbar-dropdown" type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-dropdown" aria-expanded="false">
+            <!-- <span class="sr-only">Open main menu</span> -->
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </button>
+        <a href="#" class="flex items-center mx-auto md:mx-0 py-3">
+            <img src="../img/logo.png" class="" alt="Logo" />
+        </a>
+
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul
+                class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="#"
+                        class="block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 md:dark:text-white dark:bg-red-600 md:dark:bg-transparent"
+                        aria-current="page">HOME</a>
+                </li>
+                <li>
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">BLOG
+                        <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                            aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                        </ul>
+                        <div class="py-1">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                                out</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">FEATURES
+                        <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                            aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                        </ul>
+                        <div class="py-1">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                                out</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">CATEGORIES
+                        <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                            aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                        </ul>
+                        <div class="py-1">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                                out</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">CONTACT</a>
+                </li>
+                <li>
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">SHOP
+                        <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                            aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                        </ul>
+                        <div class="py-1">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                                out</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">PORTFOLIO</a>
+                </li>
+                <div class="hidden md:block">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" value="" class="sr-only peer">
+                        <div
+                            class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                        </div>
+                    </label>
+                </div>
+            </ul>
         </div>
-        <ul class="m-auto">
-          <li class="inline-block">
-            <a href="#" class="uppercase p-5">home</a>
-          </li>
-          <li class="inline-block">
-            <a
-              href="#"
-              class="uppercase p-5 relative z-10 overflow-hidden"
-              href="#"
-              >blog
-              <span
-                ><svg
-                  class="w-5 h-5 inline ml-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="inline-block">
-            <a
-              href="#"
-              class="uppercase p-5 relative z-10 overflow-hidden"
-              href="#"
-              >feature
-              <span
-                ><svg
-                  class="w-5 h-5 inline ml-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="inline-block">
-            <a
-              href="#"
-              class="uppercase p-5 relative z-10 overflow-hidden"
-              href="#"
-              >category
-              <span
-                ><svg
-                  class="w-5 h-5 inline ml-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="inline-block">
-            <a href="#" class="uppercase p-5">about</a>
-          </li>
-          <li class="inline-block">
-            <a href="#" class="uppercase p-5">contact</a>
-          </li>
-          <li class="inline-block">
-            <a
-              href="#"
-              class="uppercase p-5 relative z-10 overflow-hidden"
-              href="#"
-              >shop
-              <span
-                ><svg
-                  class="w-5 h-5 inline ml-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="inline-block">
-            <a href="#" class="uppercase p-5">portfolio</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    </div>
+</nav>
+</div>
   </header>
   <main>
     <section class="w-full first h-auto mx-auto p-10">
       <div class="md:container container-fluid">
-        <div class="grid grid-cols-3 justify-items-center ">
+        <div class="md:grid flex overflow-x-auto md:grid-cols-3  justify-items-center ">
           <img
           class="pt-10 mx-10"
-            src="/img/Rectangle 65.jpg"
+            src="../img/Rectangle 65.jpg"
             alt="first"
           />
-          <img class="col-span-1 mx-10" src="/img/Rectangle 66.jpg" alt="second" />
-          <img class="col-span-1 pt-10 mx-10" src="/img/Rectangle 67.jpg" alt="third" />
+          <img class="md:col-span-1 mx-10" src="../img/Rectangle 66.jpg" alt="second" />
+          <img class="md:col-span-1 pt-10 mx-10" src="../img/Rectangle 67.jpg" alt="third" />
         </div>
         <div class="txtblue grid text-center p-10 -mt-5">
           <em class="text-2xl mb-5">HEY THERE</em>
@@ -149,11 +225,11 @@
     </section>
 
     <section class="second">
-      <div class="container grid grid-cols-6 justify-items-center">
-        <div class="grid col-span-2 border-r-4 borderbrown solid items-center pr-20">
-          <img src="/img/Rectangle 64.jpg" class="w-48" alt="">
+      <div class="container md:grid grid-cols-6 justify-items-center">
+        <div class="grid col-span-2 border-r-4 borderbrown solid p-5 md:pr-20">
+          <img src="../img/Rectangle 64.jpg" class="w-48 m-auto " alt="">
         </div>
-        <div class="grid col-span-4 p-10">
+        <div class="grid md:col-span-4 p-10">
           <div class="pl-10">
             <h2 class="txtblue text-4xl  borderblue  mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, iusto .</h2>
             <hr class="border-2 w-28 borderblue my-5"/>
@@ -165,33 +241,40 @@
     </section>
 
     <section>
-        <div class="container">
-            <div class="grid md:grid-cols-3 ">
-                <div class="grid md:col-span-1">
-                    <div class="relative my-5">
-                      <img src="/img/20 22.jpg" alt="">
-                      <span class="absolute uppercase bg-white  top-32 left-32 py-2 px-5 hover:block hover:w-full hover:left-0 text-center">architecture</span>
-                    </div>
-                    <div class="relative my-5">
-                      <img src="/img/7 1.jpg" alt="">
-                      <span class="absolute uppercase bg-white  top-32 left-32 py-2 px-5 hover:block hover:w-full hover:left-0 text-center">photography </span>
-                    </div>
-                </div>
-                <div class="grid md:col-span-1">
-                  <div class="text-center my-auto uppercase">
+        <div class="container relative">
+            <div class="overflow-x-auto md:grid md:grid-cols-3 ">
+                <div class="md:col-span-1 w-full md:hidden block">
+                  <div class="text-center md:my-auto m-auto uppercase">
                     <h2 class="text-xl my-2">the porfolio</h2>
-                    <p class="text-6xl px-20  my-5 ">view recent work</p>
+                    <p class="lg:text-6xl md:text-4xl sm:text-2xl text-4xl lg:px-20 md:px-30 px-25 my-5 ">view recent work</p>
                     <a href="#" class="px-6 py-3 italic border-2 txtblue">explore</a>
                   </div>
                 </div>
-                <div class="grid md:col-span-1">
-                  <div class="relative my-5">
-                    <img src="/img/21 1.jpg" alt="">
-                    <span class="absolute uppercase bg-white  top-32 left-32 py-2 px-5 hover:block hover:w-full hover:left-0 text-center">interior</span>
+                <div class="flex sm:grid md:col-span-1">
+                    <div class="relative my-5 mx-2">
+                      <img src="../img/20 22.jpg" alt="">
+                      <span class="absolute uppercase bg-white  top-32 left-32 py-2 px-5 hover:block hover:w-full hover:left-0 text-center lg:block hidden">architecture</span>
+                    </div>
+                    <div class="relative my-5">
+                      <img src="../img/7 1.jpg" alt="">
+                      <span class="absolute uppercase bg-white  top-32 left-32 py-2 px-5 hover:block hover:w-full hover:left-0 text-center lg:block hidden">photography </span>
+                    </div>
+                </div>
+                <div class="md:col-span-1 md:block hidden">
+                  <div class="text-center md:my-auto m-auto uppercase">
+                    <h2 class="text-xl my-2">the porfolio</h2>
+                    <p class="lg:text-6xl md:text-4xl sm:text-2xl text-4xl lg:px-20 md:px-30 px-25 my-5 ">view recent work</p>
+                    <a href="#" class="px-6 py-3 italic border-2 txtblue">explore</a>
+                  </div>
+                </div>
+                <div class="flex md:grid md:col-span-1">
+                  <div class="relative my-5 mx-2">
+                    <img src="../img/21 1.jpg" alt="">
+                    <span class="absolute uppercase bg-white  top-32 left-32 py-2 px-5 hover:block hover:w-full hover:left-0 text-center lg:block hidden">interior</span>
                   </div>
                   <div class="relative my-5">
-                    <img src="/img/22 1.jpg" alt="">
-                    <span class="absolute uppercase bg-white  top-32 left-32 py-2 px-5 hover:block hover:w-full hover:left-0 text-center">animal</span>
+                    <img src="../img/22 1.jpg" alt="">
+                    <span class="absolute uppercase bg-white  top-32 left-32 py-2 px-5 hover:block hover:w-full hover:left-0 text-center lg:block hidden">animal</span>
                   </div>
               </div>
             </div>
@@ -199,9 +282,9 @@
     </section>
 
     <section class="first">
-        <div class="container">
-          <div class="grid grid-cols-6">
-              <div class="grid col-span-3">
+        <div class="container"> 
+          <div class="grid md:grid-cols-6">
+              <div class="grid md:col-span-3">
                   <div class="p-5 borderbrown border-r-2">
                     <h2 class="text-4xl txtblue">Tools For Creatives</h2>
                     <hr class="border-2 w-24 borderblue my-3">
@@ -211,43 +294,387 @@
                     <a href="#" class="border-2 borderbrown uppercase italic txtblue px-5 py-2 hover:bg-yellow-200  " >go to the blog</a>
                   </div>
               </div>
-              <div class="grid col-span-3 ">
+              <div class="grid md:col-span-3 md:order-2 sm:order-1">
                   <div class="p-10 flex justify-around ml-10">
-                    <img src="/img/23.jpg" class="mx-4 border-2" alt="img23">
-                    <img src="/img/24.jpg" class="mx-4 border-2" alt="img24">
+                    <img src="../img/23.jpg" class="mx-4 w-[50%] border-2" alt="img23">
+                    <img src="../img/24.jpg" class="mx-4 w-[50%] border-2" alt="img24">
                   </div>
               </div>
           </div>  
         </div>
     </section>
 
-    <section class="p-5">
-        <div class="container">
-            <div class="grid grid-cols-3 justify-items-center">
+    <section class="my-10 ">
+        <div class="container justify-items-center">
+            <div class="flex flex-row md:grid-cols-3  overflow-x-auto overflow-y-auto  p-5 m-5">
               <div class="cols-span-1 relative">
-                <div class="border-2 borderbrown p-10 mx-5 italic txtblue text-xl"> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laborum et quod, a velit exercitationem sed deleniti iusto quaerat, repellat ea quae impedit ipsam mollitia quia. Mollitia voluptas labore ex</p><div class="mt-5"> 
-                  <img src="/img/Rectangle 66.jpg" class=" w-24 h-24 rounded-full absolute -bottom-12 left-52 border-2 borderbrown p-1 " alt="">
+                <div class="border-2 w-96 p-5 borderbrown mx-5 italic txtblue text-xl"> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laborum et quod, a velit exercitationem sed deleniti iusto quaerat, repellat ea quae impedit ipsam mollitia quia. Mollitia voluptas labore ex</p><div class="flex justify-center"> 
+                  <img src="../img/Rectangle 66.jpg" class="w-24 h-24 rounded-full absolute  border-2 borderbrown p-1 " alt="">
                 </div></div>
               </div>
               <div class="cols-span-1 relative">
-                <div class="border-2 borderbrown p-10 mx-5 italic txtblue text-xl font"> <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laborum et quod, a velit exercitationem sed deleniti iusto quaerat, repellat ea quae impedit ipsam mollitia quia. Mollitia voluptas labore ex"</p><div class="mt-5"> 
-                  <img src="/img/Rectangle 66.jpg" class=" w-24 h-24 rounded-full absolute -bottom-12 left-52 border-2 borderbrown p-1 " alt="">
+                <div class="border-2 w-96 p-5 borderbrown mx-5 italic txtblue text-xl font"> <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laborum et quod, a velit exercitationem sed deleniti iusto quaerat, repellat ea quae impedit ipsam mollitia quia. Mollitia voluptas labore ex"</p><div class="flex justify-center"> 
+                  <img src="../img/Rectangle 66.jpg" class="w-24 h-24 rounded-full absolute   border-2 borderbrown p-1 " alt="">
                 </div></div>
               </div>
               <div class="cols-span-1 relative">
-                <div class="border-2 borderbrown p-10 mx-5 italic txtblue text-xl"> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laborum et quod, a velit exercitationem sed deleniti iusto quaerat, repellat ea quae impedit ipsam mollitia quia. Mollitia voluptas labore ex</p><div class="mt-5"> 
-                  <img src="/img/Rectangle 66.jpg" class=" w-24 h-24 rounded-full absolute -bottom-12 left-52 border-2 borderbrown p-1 " alt="">
+                <div class="border-2 w-96 p-5 borderbrown mx-5 italic txtblue text-xl"> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laborum et quod, a velit exercitationem sed deleniti iusto quaerat, repellat ea quae impedit ipsam mollitia quia. Mollitia voluptas labore ex</p><div class="flex justify-center"> 
+                  <img src="../img/Rectangle 66.jpg" class=" w-24 h-24 rounded-full absolute border-2 borderbrown p-1 " alt="">
                 </div></div>
               </div>
         </div>
     </section>
 
-    <section class="inner">
-        
+    <section class="first my-10 p-5">
+        <div class="container p-5">
+          <div class="flex ">
+            <div>
+              <img src="../img/3.jpg" class="mx-4" alt="">
+            </div>
+            <div>
+              <img src="../img/26.jpg" class="mx-4" alt="">
+            </div>
+          </div>
+        </div>
     </section>
 
+    <section>
+        <div class="container py-10">
+            <div class="my-4 text-xl sm:text-2xl md:text-4xl">
+                <a href="#life" active class="px-4 border-b-2 borderblue">Lifestyle</a>
+                <a href="#travel" class="px-4 border-b-2 bordertravel">Travel</a>
+                <a href="#photos" class="px-4 border-b-2 borderphotos">Photos</a>
+            </div>
+            <div id="life" class=" border-2 borderblue p-5 hidden target:block">
+                <p class="text-xl txtbrown">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut nostrum quisquam cumque. Architecto voluptatem hic ad facilis, recusandae quam aliquid exercitationem, quasi, eveniet dolorum non molestias quidem at inventore autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur ab dolorum ullam doloribus veniam, quisquam fugit fugiat eligendi quo?
+                </p>
+            </div>
+            <div id="travel" class=" border-2 bordertravel hidden target:block">
+              <p class="text-xl txtbrown">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut nostrum quisquam cumque. Architecto voluptatem hic ad facilis, recusandae quam aliquid exercitationem, quasi, eveniet dolorum non molestias quidem at inventore autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur ab dolorum ullam doloribus veniam, quisquam fugit fugiat eligendi quo?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis dolorem provident quas totam, aliquid deleniti. Impedit quo quaerat quas deserunt quos tempore expedita magnam error, animi voluptatem molestiae nesciunt quibusdam!
+              </p>
+          </div>
+          <div id="photos" class="border-2 borderphotos p-5 hidden target:block">
+            <p class="text-xl txtbrown">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut nostrum quisquam cumque. Architecto voluptatem hic ad facilis, recusandae quam aliquid exercitationem, quasi, eveniet dolorum non molestias quidem at inventore autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur ab dolorum ullam doloribus veniam, quisquam fugit fugiat eligendi quo?
+            </p>
+        </div>
+        </div>
+    </section>  
+
+    <section class="first">
+        <div class="container">
+            <h1 class="text-center p-5 txtblue text-4xl">Lets Collaborate Together</h1>
+            <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-5 py-5 txtbrown">
+              <div class="grid col-span-1 mx-4">
+                  <p class="leading-loose">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quae dolor est expedita fugit iusto atque quidem perspiciatis ab explicabo maiores illo voluptatum tempora doloremque quis vero, placeat dolores magni.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, optio?
+                  </p>
+              </div>
+              <div class="col-span-1 sm:block hidden mx-4">
+                <p class="leading-loose">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quae dolor est expedita fugit iusto atque
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. quidem perspiciatis ab explicabo maiores illo voluptatum tempora doloremque quis vero, placeat dolores magni.</p>
+            </div>
+            <div class="col-span-1 md:block hidden mx-4">
+              <p class="leading-loose">Lorem ipsum dolor Lorem, ipsum dolor sit amet consectetur adipisicing. sit amet consectetur adipisicing elit. Aspernatur quae dolor est expedita fugit iusto atque quidem perspiciatis ab explicabo maiores illo voluptatum tempora doloremque quis vero, placeat dolores magni. Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            </div>    
+            <div class="col-span-1 md:block hidden mx-4">
+              <p class="leading-loose">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quae dolor est expedita fugit iusto atque quidem perspiciatis ab explicabo maiores illo voluptatum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae? tempora doloremque quis vero, placeat dolores magni.</p>
+            </div>              
+          </div>
+        </div>
+    </section>
+
+    <section>
+       <div class="container">
+        <h1 class="text-4xl txtblue p-5 text-center">Recent Posts</h1>
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 justify-items-center">
+              <div class="md:col-span-1 my-5">
+                <div class="w-full xl:w-96 lg:w-80 md:w-80 sm:w-80 h-full sm:text-center text-left border-2 borderbrown">
+                    <img src="../img/17 2.jpg" class="w-[100%] hidden sm:block" alt="posts">
+                    <div class="p-5">
+                      <p class="textbrown">PHOTO</p>
+                      <h2 class="text-xl my-2 txtblue">Little Known Ways To Rid YourSelf</h2>
+                      <p>June 20,2023</p>
+                  </div>
+                  <hr class="w-fullborderbrown m-auto hidden sm:block">
+                  <div class="m-5 hidden sm:block">
+                    <p class="txtblue my-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum adipisci sit culpa quisquam architecto  </p>
+                    <a href="" class="Txtblue border-2 borderbrown text-center m-auto px-5 py-3 ">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="grid md:col-span-1 my-5">
+                <div class="w-full xl:w-96 lg:w-80 md:w-80 sm:w-80 h-full sm:text-center text-left border-2 borderbrown">
+                    <div class="p-5">
+                        <p class="textbrown">PHOTO</p>
+                        <h2 class="text-xl my-2 txtblue">Little Known Ways To Rid YourSelf</h2>
+                        <p>June 20,2023</p>
+                    </div>
+                    <hr class="w-80 borderbrown m-auto hidden sm:block">
+                    <div class="m-5 hidden sm:block">
+                      <p class="txtblue my-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum adipisci sit culpa quisquam architecto  </p>
+                      <a href="" class="Txtblue border-2 borderbrown text-center m-auto px-5 py-3 ">Read More</a>
+                    </div>
+                    <img src="../img/17 2.jpg" class="w-[100%] hidden sm:block" alt="posts">
+                </div>  
+              </div>
+              <div class="grid md:col-span-1 my-5">
+                <div class="w-full xl:w-96 lg:w-80 md:w-80 sm:w-80  h-full sm:text-center text-left border-2 borderbrown">
+                    <img src="../img/17 2.jpg" class="w-[100%] hidden sm:block" alt="posts">
+                    <div class="p-5 ">
+                      <p class="textbrown">PHOTO</p>
+                      <h2 class="text-xl my-2 txtblue">Little Known Ways To Rid YourSelf</h2>
+                      <p>June 20,2023</p>
+                  </div>
+                  <hr class="w-80 borderbrown m-auto hidden sm:block">
+                  <div class="m-5 hidden sm:block">
+                    <p class="txtblue my-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum adipisci sit culpa quisquam architecto  </p>
+                    <a href="" class="Txtblue border-2 borderbrown text-center m-auto px-5 py-3 ">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="grid md:col-span-1 my-5">
+                <div class="w-full xl:w-96 lg:w-80 md:w-80 sm:w-80  h-full sm:text-center text-left border-2 borderbrown">
+                  <div class="p-5 ">
+                    <p class="textbrown">PHOTO</p>
+                    <h2 class="text-xl my-2 txtblue">Little Known Ways To Rid YourSelf</h2>
+                    <p>June 20,2023</p>
+                  </div>
+                  <img src="../img/17 2.jpg" class="w-[100%] hidden sm:block" alt="posts">
+                  <div class="m-5 hidden sm:block">
+                    <p class="txtblue my-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum adipisci sit culpa quisquam architecto  </p>
+                    <a href="" class="Txtblue border-2 borderbrown text-center m-auto px-5 py-3 ">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-1 my-5">
+                <div class="w-full xl:w-96 lg:w-80 md:w-80 sm:w-80  h-full sm:text-center text-left border-2 borderbrown">
+                  <div class="p-5 ">
+                    <p class="textbrown">PHOTO</p>
+                    <h2 class="text-xl my-2 txtblue">Little Known Ways To Rid YourSelf</h2>
+                    <p>June 20,2023</p>
+                  </div>
+                  <img src="../img/17 2.jpg" class="w-[100%] hidden sm:block" alt="posts">
+                  <div class="m-5 hidden sm:block">
+                    <p class="txtblue my-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum adipisci sit culpa quisquam architecto  </p>
+                    <a href="" class="Txtblue border-2 borderbrown text-center m-auto px-5 py-3 ">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-1 my-5">
+                <div class="w-full xl:w-96 lg:w-80 md:w-80 sm:w-80  h-full sm:text-center text-left border-2 borderbrown">
+                  <div class="p-5">
+                    <p class="textbrown">PHOTO</p>
+                    <h2 class="text-xl my-2 txtblue">Little Known Ways To Rid YourSelf</h2>
+                    <p>June 20,2023</p>
+                  </div>
+                  <img src="../img/17 2.jpg" class="w-[100%] hidden sm:block" alt="posts">
+                  <div class="m-5">
+                    <p class="txtblue my-5 hidden sm:block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum adipisci sit culpa quisquam architecto  </p>
+                    <a href="" class="Txtblue border-2 borderbrown text-center m-auto px-5 py-3 hidden sm:block">Read More</a>
+                  </div>
+                </div>
+              </div>
+       </div>
+    </section>
+
+    <section class="first">
+      <div class="container">
+            <h1 class="text-4xl text-center textblue  p-5">Contact Us</h1>
+            <div class="grid md:grid-cols-2">
+              <div class="grid md:col-span-1 p-5 m-4">
+                  <form action="" >
+                    <input type="text"  class="txtblue border-2 py-2 my-2 border-gray-400 w-full bg-transparent" placeholder="First Name">
+                    <input type="text"  class="txtblue border-2 py-2 my-2 border-gray-400  w-full bg-transparent" placeholder="Last Name">
+                    <input type="text"  class="txtblue border-2 py-2 my-2 border-gray-400  w-full bg-transparent" placeholder="Email"> 
+                    <label for="comment" class="txtblue text-xl">Comments</label>
+                    <textarea class="w-full border-2 py-2 my-2 border-gray-400  bg-transparent" cols="10" rows="6"></textarea>
+                    <input type="submit" class="px-5 py-2 txtblue border-2 text-xl border-gray-400" value="SUBMIT">
+                  </form>
+              </div>
+              <div class="grid col-span-1 p-5  m-4">
+                <h1 class="txtblue text-xl mb-2">Upload-files</h1>
+                <div class="text-center p-32 border-dashed border-2 border-gray-300 w-[100%] h-[400px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 m-auto">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                  </svg>
+                  <p class="txtblue text-xl">Drop Your Files Here</p>
+                  <p class="mb-4">or</p>
+                  <a href="#" class="border-2 border-gray-400 px-5 py-2 ">Browse File</a>              
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="my-10">
+        <div class="container text-center">
+            <h1 class="text-4xl txtblue my-4 p-5">FAQ</h1>
+        </div>
+        <div class="container p-5">
+          <div id="accordionExample">
+            <div
+              class=" border borderblue  bg-white dark:border-neutral-600 dark:bg-neutral-800">
+              <h2 class="mb-0" id="headingOne">
+                <button
+                  class="group relative flex w-full items-center rounded-t-[15px] border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                  type="button"
+                  data-te-collapse-init
+                  data-te-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne">
+                 Lorem ipsum dolor sit amet.
+                  <span
+                    class="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-6 w-6">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="!visible"
+                data-te-collapse-item
+                data-te-collapse-show
+                aria-labelledby="headingOne"
+                data-te-parent="#accordionExample">
+                <div class="py-4 px-5">
+                  <strong>This is the first item's accordion body.</strong> It is
+                  shown by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes control
+                  the overall appearance, as well as the showing and hiding via CSS
+                  transitions. You can modify any of this with custom CSS or
+                  overriding our default variables. It's also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div
+              class="border  borderblue bg-white dark:border-neutral-600 dark:bg-neutral-800">
+              <h2 class="mb-0" id="headingTwo">
+                <button
+                  class="group relative flex w-full items-center rounded-none border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                  type="button"
+                  data-te-collapse-init
+                  data-te-collapse-collapsed
+                  data-te-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  Lorem ipsum dolor sit amet.
+                  <span
+                    class="ml-auto -mr-1 h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-6 w-6">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="!visible hidden"
+                data-te-collapse-item
+                aria-labelledby="headingTwo"
+                data-te-parent="#accordionExample">
+                <div class="py-4 px-5">
+                  <strong>This is the second item's accordion body.</strong> It is
+                  hidden by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes control
+                  the overall appearance, as well as the showing and hiding via CSS
+                  transitions. You can modify any of this with custom CSS or
+                  overriding our default variables. It's also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div
+              class=" border borderblue bg-white dark:border-neutral-600 dark:bg-neutral-800">
+              <h2 class="accordion-header mb-0" id="headingThree">
+                <button
+                  class="group relative flex w-full items-center border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] [&[data-te-collapse-collapsed]]:rounded-b-[15px] [&[data-te-collapse-collapsed]]:transition-none"
+                  type="button"
+                  data-te-collapse-init
+                  data-te-collapse-collapsed
+                  data-te-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree">
+                Lorem ipsum dolor sit amet consectetur.
+                  <span
+                    class="ml-auto -mr-1 h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-6 w-6">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="!visible hidden"
+                data-te-collapse-item
+                aria-labelledby="headingThree"
+                data-te-parent="#accordionExample">
+                <div class="py-4 px-5">
+                  <strong>This is the third item's accordion body.</strong> It is
+                  hidden by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes control
+                  the overall appearance, as well as the showing and hiding via CSS
+                  transitions. You can modify any of this with custom CSS or
+                  overriding our default variables. It's also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
   </main>
-  <footer></footer>
+  <footer class="bg-gray-100 p-3">
+        <div class="container flex">
+            <div class="text-gray-500">
+                <p>c 2022 Haus Gitschberg | Terms & Condition | Privacy Policy</p>
+            </div>
+            <div class="ml-auto">
+              <em class="bi bi-facebook mx-2"></em>
+              <em class="bi bi-twitter  mx-2"></em>
+              <em class="bi bi-instagram  mx-2"></em>
+              <em class="bi bi-twitter  mx-2"></em>
+              <em class="bi bi-youtube  mx-2"></em>
+            </div>
+        </div>    
+  </footer>
 </body>
 
 </html>
